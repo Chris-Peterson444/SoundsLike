@@ -1,0 +1,23 @@
+Our approach makes the assumption that any given sound can be compared in terms of its similarity to another by finding the values that those sounds have in common. That is, the similarity of one sound to another can be determined by the number of feature values that they do not share; /t/ and /d/, for example, are maximally similar to each other in that they differ only in their [voice] value, with /t/ being [-voice] and /d/ being [+voice].
+
+Uses for this feature system typically involve finding groups of sounds that pattern together in terms of their behavior, or in more theoretical applications, which innate parametric features are stored as binary* values that speakers use to organize their knowledge of their language's phonology.
+
+So, as our purpose is to map similar sounding sounds, our current approach is to set a threshold for the number of feature values that can disagree from the values of the initial sound, and only make sound changes to sounds that fit within that threshold.
+
+While the values in this spreadsheet follow the standard approach to features as closely as possible, some changes have been made to allow us to use this system given the phonetic encodings of the arpabet sounds used in the CMU database. These are detailed below:
+
+Flap /ɾ/ is /d/ but [+sonorant]
+
+ER /ɝ/ is /ɹ/ but [+syllabic]
+
+[ɑ] is [a]
+[ɑ] specified as [+back]
+
+[ǝ] is [ʌ]
+
+Probably removing the CG row is good, because glottal stop /ʔ/ does not exist in the CMU database and it is the only [+CG] sound.
+
+Diphthongs
+Diphthong values have been created to select diphthongs that sound similar; that is, instead of using a typical featural approach to diphthongs that use semivowels as the offglide, diphthongs have been encoded as single sounds and organized using various features. This is due to a desire to not complicate the arpabet encoding. An extra diphthong feature [+/-diph]” has been added to make it so that only diphthongs can replace other diphthongs if so desired. It may be necessary to set a particular loop to replace diphthongs... if we care about that, other vowels may be just fine.
+
+In another file I have available, syllabic nasals and liquids are nasals and liquids but [+syllabic], with double letters used for their IPA symbols to avoid encoding issues. Since CMU doesn;t use them, we shouldn't worry about this; the best IPA-to-speech reader I know of, http://ipa-reader.xyz/, which runs off of Amazon Poly, 
