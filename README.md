@@ -12,9 +12,9 @@ There is also a [training notebook](https://colab.research.google.com/drive/1QNJ
 ## Full Report
 
 # To-Do
-- [ ] Finish Generative Grammar Vectors
-- [ ] Geneate FST
-- [ ] Decide on a dataset(s) for classification
+- [x] Finish Generative Grammar Vectors
+- [x] Geneate FST
+- [x] Decide on a dataset(s) for classification
 - [ ] Generate LSTM
 - [ ] Write Report
 - [ ] Tidy up Presentation
