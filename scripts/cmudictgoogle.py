@@ -6,6 +6,7 @@
 import pickle
 import heapq
 from collections import defaultdict
+import re
 
 EPS='<eps>'
 
