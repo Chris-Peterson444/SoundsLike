@@ -15,6 +15,6 @@ There is also a [training notebook](https://colab.research.google.com/drive/1QNJ
 - [x] Finish Generative Grammar Vectors
 - [x] Geneate FST
 - [x] Decide on a dataset(s) for classification
-- [ ] Generate LSTM
+- [ ] Generate Sequence Classifier
 - [ ] Write Report
 - [ ] Tidy up Presentation
