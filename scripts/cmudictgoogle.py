@@ -1,4 +1,4 @@
-# fst.py
+# py
 #
 # Weighted Finite State Transducers, with composition and
 # shortest paths.
@@ -298,12 +298,12 @@ def generate_cmu_fst_pair(vocab='-',
 
 
     # initialize the arpabet to word FST
-    p2w = fst.FST()
+    p2w = FST()
     p2w.set_initial(1)
     p2w.set_final(1)
 
     # initilize the word to arpabet FST
-    w2p = fst.FST()
+    w2p = FST()
     w2p.set_initial(1)
     w2p.set_final(1)
 
@@ -349,10 +349,10 @@ def generate_cmu_fst_pair(vocab='-',
                 for sym in toks:
                     to_st = w2p_state_id
                     w2p_state_id += 1
-                    w2p.add_transition(from_st, to_st, fst.EPS, sym)
+                    w2p.add_transition(from_st, to_st, EPS, sym)
                     from_st = to_st
                 if last_sym is not None:
-                    w2p.add_transition(from_st, 1, fst.EPS, last_sym)
+                    w2p.add_transition(from_st, 1, EPS, last_sym)
         
                 # build the arpabet to word FST
                 last_sym = toks2.pop()
@@ -361,7 +361,7 @@ def generate_cmu_fst_pair(vocab='-',
                 
                 for sym in toks2:
                     to_st = p2w_state_id
-                    p2w.add_transition(from_st, to_st, sym, fst.EPS)
+                    p2w.add_transition(from_st, to_st, sym, EPS)
                     from_st = to_st
                     p2w_state_id += 1
 
